@@ -1,0 +1,509 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Header Navbar Styles */
+/* .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-image: linear-gradient(90deg, #74D7BB, #53C8B6, #35A99C);
+    background-color: transparent;
+} */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px; /* ✅ Add this line */
+  z-index: 999; /* ✅ Make sure it stays on top */
+  background-image: linear-gradient(90deg, #74D7BB, #53C8B6, #35A99C);
+}
+
+
+
+.logo {
+    padding: 0 5rem;
+}
+
+.logo .logo-heading {
+    color: #fff;
+}
+
+.menu {
+    padding: 0 5rem;
+}
+
+.hamburger {
+    display: none;
+    color: #fff;
+    font-size: 25px;
+}
+
+.cross-icon {
+    display: none;
+}
+
+.menu .menu-list {
+    display: flex;
+   list-style: none;
+}
+
+.menu-list .menu-list-items {
+    padding: 0.5rem 1rem;
+}
+
+section {
+  scroll-margin-top: 120px;
+}
+
+
+@media screen and (min-width: 856px) and (max-width: 1024px) {
+    .menu-list .menu-list-items {
+        padding: 0.5rem 0.3rem;
+    }
+}
+
+/* Main Hero Section Styles */
+.hero {
+    background-image: url('');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: auto 100px; 
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin: 4.8rem 0;
+}
+
+.hero .intro {
+    text-align: center;
+    margin: 0 5rem;
+}
+
+.hero .intro-buttons {
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* About section styles */
+.about {
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(45deg, #f0f0f2, #f1f5f6);
+    justify-content: space-between;
+    width: 100%;
+}
+
+.about .about-text {
+    width: 450px;
+    color: #060606;
+    padding: 5rem 1rem 5rem 5rem;
+}
+
+.about .about-image img {
+    height: 400px;
+    width: 450px;
+    padding: 5rem 5rem 5rem 1rem;
+}
+
+/* Portfolio section styles */
+.portfolio {
+    margin: 4.8rem 0;
+    padding: 0 5rem;
+}
+
+.port-card {
+    padding: 0 !important;
+    background: none !important;
+    border: 2px solid #000;
+}
+
+.port-card .image {
+    width: 100%;
+}
+
+.port-card .image img {
+    height: 200px;
+    width: 100%;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+/* Services (Languages/Skills) */
+.services {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 4.8rem 0;
+    padding: 0 5rem;
+}
+.my-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;          /* Reduced vertical spacing */
+    flex-direction: row;
+    gap: 1rem;               /* Added horizontal spacing only */
+    color: white;
+    flex-wrap: wrap;         /* Allows better layout on smaller screens */
+}
+
+
+.my-row .my-col {
+    text-align: center;
+    width: auto;       /* ✅ Allow width to fit square card */
+    padding: 0.5rem;
+}
+
+
+.my-col:hover {
+    transform: scale(1.05);
+}
+.my-card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background-image: linear-gradient(#a0d9e1, #73d4c2, #48b3a5);
+    padding: 0.5rem;
+    height: 150px;
+    width: 150px;   /* ✅ Add this to match height and make it square */
+}
+
+/* 
+.icon {
+    height: 50px;
+    width: 50px;
+    font-size: 24px;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+} */
+
+.blue-text {
+    color: #2E5BA5;
+}
+
+
+
+/* Certificates Section */
+
+
+.certificates {
+  scroll-margin-top: 120px; 
+  margin-top: 4.8rem;        
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+/* Heading inside the certificate section */
+.certificate-heading h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Container for carousel and layout */
+.certificate-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Carousel container */
+.carousel-container {
+  max-width: 600px;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Inner carousel flexbox */
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Each image inside the carousel */
+.carousel-image {
+  min-width: 100%;
+  display: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Only the active image is visible */
+.carousel-image.active {
+  display: block;
+}
+
+/* Navigation buttons */
+.carousel-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.carousel-buttons button {
+  background-color: #35A99C;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  margin: 0 10px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-buttons button:hover {
+  background-color: #27948a;
+}
+
+
+
+
+
+/* Contact Section - Updated Clean Design */
+.contact {
+    padding: 0 5rem;
+}
+
+.contact-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+.contact-form {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #999;
+}
+
+.contact-form button {
+    background-color: #35A99C;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #27948a;
+}
+
+/* Contact Details Display (below form) */
+.contact-details {
+    width: 100%;
+    max-width: 700px;
+    margin: 3rem auto 2rem auto;
+    padding: 1rem;
+    text-align: center;
+    line-height: 2;
+}
+
+.details {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: 500;
+}
+
+.details span {
+    font-weight: bold;
+    color: #2E5BA5;
+}
+
+
+
+/* Footer Styles */
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 2rem;
+}
+
+.footer-list-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    margin: 0 10px;
+    border-radius: 50%;
+    background-color: #53C8B6;
+}
+/* thiss above and below is used for display the logo and img in the center */
+.footer-links img, .footer-links i {
+    display: block;
+    margin: auto;
+}
+.footer-links {
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-menu {
+    padding: 0 5rem;
+}
+
+.footer-menu .footer-menu-list {
+    display: flex;
+    list-style: none;
+}
+
+
+
+
+
+
+/* utility classes */
+.greet-heading {
+    font-size: 1.3rem;
+    font-weight: lighter;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.my-heading {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.sub-heading {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #6c6767;
+    font-weight: lighter;
+}
+
+.links:hover {
+    border-bottom: 2px solid #fff;
+}
+
+.links {
+    border-bottom: 2px solid transparent;
+    transition: all 0.25s;
+    padding: 5px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    border: none;
+}
+
+.common-btn {
+    background-color: #35A99C;
+    color: #fff;
+    border: 2px solid #35A99C;
+    transition: all 0.25s;
+}
+
+.common-btn:hover {
+    background-color: #fff;
+    color: #35A99C;
+    border: 2px solid #35A99C;
+    outline: none;
+}
+
+.ghost-btn {
+    background-color: #fff;
+    color: #35A99C;
+    border: 2px solid #35A99C;
+    outline: none;
+}
+
+.ghost-btn:hover {
+    background-color: #35A99C;
+    color: #fff;
+    transition: all 0.25s;
+    border: 2px solid #35A99C;
+}
+
+.heading-span {
+    font-weight: bolder;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.small-para {
+    font-size: 14px;
+    color: #fff;
+}
+
+.white-text {
+    color: #fff;
+}
+
+.blue-text {
+    color: #363D73;
+}
+
+section {
+  scroll-margin-top: 120px;
+}
+
+
